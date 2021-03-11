@@ -1,0 +1,8 @@
+numpy
+matplotlib
+cartopy
+ipykernel
+scipy
+pandas
+opencv-python
+pillow
