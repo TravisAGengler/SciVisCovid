@@ -1,0 +1,8 @@
+- Loading data
+- Do all locations have latlon?
+- Remove missing latlon and invalid latlon from datasets
+- US dataset + plots
+- Point/radius (Warren)
+- Heat map (Travis)
+- Gradient (Travis)
+- Mesh of some sort?
