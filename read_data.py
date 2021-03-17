@@ -25,7 +25,7 @@ def get_covid_deaths_global():
     
     Returns a pandas dataframe containing the sanitized data and timestep metadata
     """
-    return __get_sanitized_covid_data(__CONFIRMED_GLOBAL_PATH)
+    return __get_sanitized_covid_data(__DEATHS_GLOBAL_PATH)
 
 def get_covid_confirmed_US():
     """
