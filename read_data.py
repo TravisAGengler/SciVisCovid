@@ -118,6 +118,16 @@ def get_derived_covid_active_change_global():
     return delta, timesteps
 
 def get_daily_data():
+    """
+    Reads the daily data from the COVID repo. Does some regularization and calculation of Active cases where needed
+    
+    Returns a dictionary of timestamps to dataframes and the timestamps in chronological order.
+    
+    The column names are 'province', 'country', 'lat', 'lon', 'confirmed', 'deaths' recovered', 'active'
+    
+    Any days for which there is no lat-lon data are skipped in the dataset. Effectively, this means we start at 03-01-2020
+    """
+ 
     # 39 (03-01-2020) is the first daily report that contains latitude and longitude
     # 60 (03-22-2020) is the first daily report that contains active cases
     
