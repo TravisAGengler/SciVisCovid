@@ -135,6 +135,7 @@ def get_daily_data():
     timestamps = sorted(days_csv, key=lambda x: datetime.datetime.strptime(x, '%m-%d-%Y'))
         
     new_data_all = {}
+    kept_timestamps = []
     for timestamp in timestamps:
         csv_path = os.path.join(__DAILY_REPORT_PATH, timestamp) + '.csv'
         data = pd.read_csv(csv_path)
@@ -174,6 +175,7 @@ def get_daily_data():
                 break
         if must_skip:
             continue
+        kept_timestamps.append(timestamp)
 
         needed_data = data[needed_keys]
 
@@ -192,7 +194,7 @@ def get_daily_data():
         
         new_data_all[timestamp] = new_data
         
-    return new_data_all, timestamps
+    return new_data_all, kept_timestamps
 
 def __sanitize_data(data):
     """
