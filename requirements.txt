@@ -6,3 +6,7 @@ scipy
 pandas
 opencv-python
 pillow
+# https://github.com/OSGeo/gdal/issues/2827#issuecomment-668082186
+GDAL==3.0.4
+geopy
+geopandas
